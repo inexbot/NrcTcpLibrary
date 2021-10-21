@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Company>inexbot</Company>
+    <Authors>Wei Fan</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>inexbot NexDroid Tcp Library for .Net Core 3.1</Description>
+    <Copyright>inexbot</Copyright>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Version>1.0.2</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetty.Buffers" Version="0.7.0" />
+    <PackageReference Include="DotNetty.Codecs" Version="0.7.0" />
+    <PackageReference Include="DotNetty.Common" Version="0.7.0" />
+    <PackageReference Include="DotNetty.Handlers" Version="0.7.0" />
+    <PackageReference Include="DotNetty.Transport" Version="0.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
