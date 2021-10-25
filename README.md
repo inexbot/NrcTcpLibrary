@@ -6,6 +6,8 @@
 
 .NET CORE 3.1 / C# / DotNetty
 
+推荐使用 Nuget 安装库并使用[https://www.nuget.org/packages/NrcTcpLibrary](https://www.nuget.org/packages/NrcTcpLibrary)。
+
 ## 编译
 
 生成解决方案-生成 NrcTcpLibrary
