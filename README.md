@@ -6,11 +6,37 @@
 
 .NET CORE 3.1 / C# / DotNetty
 
+项目介绍:[Blaze-网络通讯库](https://blaze.inexbot.com/docs/dotnet/tcplibrary)
+
 推荐使用 Nuget 安装库并使用[https://www.nuget.org/packages/NrcTcpLibrary](https://www.nuget.org/packages/NrcTcpLibrary)。
 
 ## 编译
 
 生成解决方案-生成 NrcTcpLibrary
+
+## API
+
+### MessageHandler
+
+```csharp
+public class MessageHandler
+{
+    public virtual void Handler(Message message);//接收数据
+    public virtual void ConnectState(bool state);//连接状态
+}
+```
+
+### ClientBase
+
+```csharp
+public class ClientBase
+{
+    public static ClientBase GetInstance(MessageHandler msh);//获得实例
+    public void RunClientAsync(string ip,int port);//连接控制器
+    public void SendMessage(int command,string data);//发送数据到控制器，数据类型为string
+    public void SendMessage(int command,byte[] data);//发送数据到控制器，数据类型为byte[]
+}
+```
 
 ## 使用
 

@@ -29,7 +29,10 @@ namespace NrcTcpLibrary
             try
             {
                 Bootstrap bootstrap = new Bootstrap();
-                bootstrap.Group(group).Channel<TcpSocketChannel>().Option(ChannelOption.TcpNodelay, true).Option(ChannelOption.ConnectTimeout, TimeSpan.FromSeconds(3)).Handler(new ActionChannelInitializer<ISocketChannel>(channel =>
+                bootstrap.Group(group).Channel<TcpSocketChannel>()
+                    .Option(ChannelOption.TcpNodelay, true)
+                    .Option(ChannelOption.ConnectTimeout, TimeSpan.FromSeconds(3))
+                    .Handler(new ActionChannelInitializer<ISocketChannel>(channel =>
                  {
                      IChannelPipeline pipeline = channel.Pipeline;
                      pipeline.AddLast("idleStateHandle", new IdleStateHandler(2, 2, 0));
